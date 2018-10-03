@@ -40,7 +40,7 @@ def webhook():
         if deep_match(match, subject):
             break
     else:
-        logger.warning("No rule found for %s.", repr(subject))
+        logger.warning("No rule found for request.")
         raise BadRequest()
 
     if ":" in rule:
